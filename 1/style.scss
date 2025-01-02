@@ -1,0 +1,171 @@
+/** @format */
+$default-font-size: 18px;
+$normal-font-size: 1rem;
+$small-gap: 5px;
+$color-background: #ddd;
+$color-text-label: #fff;
+$color-text-legend: #222;
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+%text-field {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 10px auto;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  border: #222 solid 1px;
+}
+
+%placeholder-text {
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: $default-font-size;
+}
+
+body {
+  background-color: $color-background;
+  margin: 100px auto;
+  @extend %flex-center;
+  flex-direction: column;
+}
+
+header {
+  @extend %flex-center;
+  padding: 1vh;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+main {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 50px;
+  font-size: 2rem;
+  display: inline-block;
+  margin: 0 auto;
+
+  & .form-container {
+    @extend %flex-center;
+    flex-direction: column;
+  }
+
+  & .fieldset-container {
+    @extend %flex-space-between;
+    flex-direction: column;
+  }
+
+  & fieldset {
+    background-color: #922121;
+    color: $color-text-label;
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 25px;
+    position: relative;
+
+    & legend {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      background-color: #922121;
+      border-radius: 25px;
+      border: #222 solid 3px;
+      font-size: 1.5rem;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      transform: translateY(-55%);
+    }
+  }
+}
+
+.input-field-container {
+  @extend %flex-center;
+  flex-wrap: wrap;
+  margin: calc(2 * $small-gap) auto;
+
+  & select {
+    @extend %text-field;
+  }
+  & textarea {
+    @extend %text-field;
+
+    &::placeholder {
+      @extend %placeholder-text;
+    }
+  }
+
+  & input {
+    @extend %text-field;
+
+    &::placeholder {
+      @extend %placeholder-text;
+    }
+  }
+  & input[type="radio"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 3vh;
+
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: relative;
+
+    &:checked {
+      content: "";
+      border-radius: 50%;
+      background-color: #222;
+    }
+  }
+  & label {
+    text-align: center;
+  }
+}
+
+.btn {
+  @extend %flex-center;
+  padding: 20px;
+
+  & > button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 20px 40px;
+    margin: 0 auto;
+    background-color: #222;
+    border-radius: 25px;
+    box-shadow: #fff 0 0 0 5px, #222 0 0 0 12px;
+  }
+}

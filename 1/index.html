@@ -1,0 +1,142 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+
+  <body>
+    <header class="container">Registration</header>
+    <main>
+      <div class="form-container">
+        <form
+          action=""
+          class="">
+          <div class="fieldset-container">
+            <fieldset class="container">
+              <legend>Information</legend>
+
+              <div class="input-field-container">
+                <label for="first-name">First Name:</label>
+                <input
+                  type="text"
+                  name="first_name"
+                  required
+                  aria-required="true"
+                  placeholder="Enter your first name" />
+              </div>
+
+              <div class="input-field-container">
+                <label for="last-name">Last Name:</label>
+                <input
+                  type="text"
+                  name="last_name"
+                  required
+                  aria-required="true"
+                  placeholder="Enter your last name" />
+              </div>
+
+              <div class="input-field-container">
+                <label for="email">Email Address:</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  aria-required="true"
+                  placeholder="Enter your email address" />
+              </div>
+
+              <div class="input-field-container">
+                <label for="password">Password:</label>
+                <input
+                  type="password"
+                  name="password"
+                  required
+                  aria-required="true"
+                  minlength="8"
+                  pattern="^(?=.*[A-Za-z])"
+                  placeholder="Enter your password" />
+              </div>
+
+              <div class="input-field-container">
+                <label for="password-confirm">Repeat Password:</label>
+                <input
+                  type="password"
+                  name="password-confirm"
+                  required
+                  aria-required="true"
+                  minlength="8"
+                  pattern="^(?=.*[A-Za-z])"
+                  placeholder="Enter your password" />
+              </div>
+            </fieldset>
+            <fieldset class="container">
+              <legend>Details</legend>
+              <div class="input-field-container">
+                <label for="date">Date of Birth:</label>
+                <input
+                  type="date"
+                  name="date"
+                  required
+                  aria-required="true"
+                  placeholder="Enter your Date of Birth" />
+              </div>
+
+              <div class="input-field-container">
+                <label for="male">Male:</label>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  aria-label="Male" /><br />
+
+                <label for="female">Female:</label>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  aria-label="Female" /><br />
+
+                <label for="other">Other:</label>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="other"
+                  aria-label="Other" /><br />
+              </div>
+
+              <div class="input-field-container">
+                <label for="about-me">About Me:</label><br />
+                <textarea
+                  name="about-me"
+                  rows="5"
+                  placeholder="Introduce yourself here..."></textarea>
+              </div>
+
+              <div class="input-field-container">
+                <label for="profession">Choose Your Profession</label>
+                <select name="interest">
+                  <option value="">--Please choose a option--</option>
+                  <option value="web-development">Web Development</option>
+                  <option value="data-analytics">Data Analytics</option>
+                  <option value="ui-ux-design">UI/UX Design</option>
+                </select>
+              </div>
+            </fieldset>
+            <div class="btn">
+              <button type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

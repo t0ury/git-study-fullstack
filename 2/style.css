@@ -1,0 +1,25 @@
+/** @format */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: #eee;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card-container:first-child {
+  background-color: #fff;
+  box-shadow: #333 0px 2px 5px 1px;
+}
+.card-container:last-child {
+  background-color: #7042e4;
+  box-shadow: #333 0px 2px 5px 1px;
+}/*# sourceMappingURL=style.css.map */
