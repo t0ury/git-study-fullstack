@@ -34,6 +34,10 @@ p.command-container {
   display: grid;
   grid-template-columns: 0fr 1fr 1fr;
   gap: 20px;
+  transition: all 0.5s ease;
+}
+.cards:hover {
+  box-shadow: inset 0 0 0 6px rgb(255, 198, 248);
 }
 .cards:first-child {
   background-color: #fff;
