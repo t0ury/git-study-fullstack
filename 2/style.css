@@ -15,11 +15,97 @@ body {
   line-height: 1.6;
 }
 
-.card-container:first-child {
-  background-color: #fff;
-  box-shadow: #333 0px 2px 5px 1px;
+p.command-container {
+  margin-top: 0;
 }
-.card-container:last-child {
-  background-color: #7042e4;
-  box-shadow: #333 0px 2px 5px 1px;
+
+.cards-container {
+  padding: 10px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cards {
+  padding: 20px;
+  margin: 10px;
+  box-shadow: #333 0px 1px 5px 0.5px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 0fr 1fr 1fr;
+  gap: 20px;
+}
+.cards:first-child {
+  background-color: #fff;
+}
+.cards:first-child p.name {
+  font-weight: bolder;
+}
+.cards:first-child p.command-container {
+  color: gray;
+}
+.cards:first-child p.job-title {
+  color: gray;
+}
+.cards:first-child span.company-name {
+  color: blue;
+  font-weight: bold;
+}
+.cards:last-child {
+  background: linear-gradient(to right, rgb(108, 108, 255), #7570ff, rgb(191, 118, 255));
+}
+.cards:last-child p.name {
+  font-weight: bolder;
+  color: white;
+}
+.cards:last-child p.command-container {
+  color: #efefef;
+}
+.cards:last-child p.job-title {
+  color: #efefef;
+}
+.cards:last-child span.company-name {
+  color: white;
+  font-weight: bold;
+}
+
+.avatars img {
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  height: 3rem;
+  border: 2px solid white;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: right;
+  align-items: top;
+  color: gold;
+  padding: 10px;
+}
+
+.command-container {
+  grid-column: 1/-1; /* Span across all columns to fill the entire line */
+  margin-top: 20px; /* Add some top margin for spacing */
+  color: #555;
+}
+
+@media screen and (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+  }
+}
+@media screen and (max-width: 480px) {
+  .profile {
+    grid-column: span 2;
+  }
+  .star-rating {
+    grid-column: 2/-1;
+    justify-content: left;
+    align-items: top;
+    padding: 0;
+    margin: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
